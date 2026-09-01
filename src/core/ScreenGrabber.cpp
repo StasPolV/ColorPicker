@@ -1,0 +1,16 @@
+#include "ScreenGrabber.h"
+
+#include <QCursor>
+#include <QPoint>
+#include <QScreen>
+
+ScreenGrabber::ScreenGrabber(QObject* parent) : QObject(parent) {}
+
+QScreen* ScreenGrabber::GetScreen() const
+{
+	QPoint cursor_pos = QCursor::pos();
+
+	QScreen* screen = QGuiApplication::screenAt(cursor_pos);
+
+	return screen;
+}

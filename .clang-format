@@ -1,0 +1,120 @@
+# Indentation
+UseTab: ForIndentation
+TabWidth: 4
+ContinuationIndentWidth: 8
+IndentWidth: 4
+IndentCaseLabels: false
+IndentGotoLabels: false
+IndentPPDirectives: None
+IndentWrappedFunctionNames: true
+NamespaceIndentation: All
+AccessModifierOffset: -4
+
+# Braces & Line Breaking
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass: true
+  AfterStruct: true
+  AfterUnion: true
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterExternBlock: true
+  AfterObjCDeclaration: true
+  AfterCaseLabel: true
+  BeforeElse: true
+  BeforeCatch: true
+  BeforeWhile: true
+  BeforeLambdaBody: true
+  IndentBraces: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+  AfterControlStatement: Always
+ColumnLimit: 100
+AlwaysBreakAfterReturnType: None
+AlwaysBreakTemplateDeclarations: Yes
+AlwaysBreakBeforeMultilineStrings: false
+BreakBeforeBinaryOperators: None
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeColon
+BreakInheritanceList: BeforeColon
+BreakStringLiterals: true
+PackConstructorInitializers: BinPack
+
+# Alignment
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: None
+AlignConsecutiveDeclarations: None
+AlignConsecutiveBitFields: None
+AlignConsecutiveMacros: None
+AlignEscapedNewlines: Left
+AlignOperands: DontAlign
+AlignTrailingComments: true
+AlignArrayOfStructures: Left
+
+
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortBlocksOnASingleLine: Never
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortEnumsOnASingleLine: false
+AllowShortLambdasOnASingleLine: Inline
+
+# Spaces
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+SpacesInAngles: Never
+SpaceBeforeAssignmentOperators: true
+SpaceAfterCStyleCast: false
+SpaceAfterTemplateKeyword: true
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpacesBeforeTrailingComments: 2
+BitFieldColonSpacing: Both
+
+# Pointers & references
+PointerAlignment: Left
+ReferenceAlignment: Left
+
+# Empty lines
+MaxEmptyLinesToKeep: 1
+KeepEmptyLinesAtTheStartOfBlocks: false
+EmptyLineBeforeAccessModifier: LogicalBlock
+EmptyLineAfterAccessModifier: Never
+
+# Included files
+SortIncludes: CaseInsensitive
+IncludeBlocks: Regroup
+IncludeIsMainRegex: '([-_](test|unittest))?$'
+IncludeCategories:
+  - Regex: '^["<](Q[A-Z]|Qt).*'
+    Priority: 2
+
+  - Regex: '^<[^.]*>'
+    Priority: 3
+
+  - Regex: '^<.*\.h>'
+    Priority: 4
+
+  - Regex: '.*'
+    Priority: 1
+SortUsingDeclarations: true
+
+# Commentaries
+ReflowComments: true
+FixNamespaceComments: true
+
+# Common
+Language: Cpp
+Standard: c++20
+ForEachMacros: ['Q_FOREACH']
+MacroBlockBegin: "^TEST_CASE_BEGIN$"
+MacroBlockEnd: "^TEST_CASE_END$"
+InsertNewlineAtEOF: true
+RemoveSemicolon: true
+QualifierAlignment: Left

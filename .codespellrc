@@ -1,0 +1,4 @@
+[codespell]
+skip = *.qrc,*.svg,build
+ignore-words-list = som,zar
+count =

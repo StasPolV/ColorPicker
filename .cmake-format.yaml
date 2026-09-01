@@ -1,0 +1,5 @@
+format:
+  line_ending: windows
+
+lint:
+  disabled_codes: ['C0327']

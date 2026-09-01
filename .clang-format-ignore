@@ -1,0 +1,22 @@
+# Build directories / artifacts
+build/**
+out/**
+Out/**
+CMakeFiles/**
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+Testing/**
+
+# Version control systems
+.git/**
+
+# IDEs / Editors
+.vs/**
+.vscode/**
+.idea/**
+*.user
+*.suo
+*.sln.docstates
+*.VC.db
+*.VC.opendb
