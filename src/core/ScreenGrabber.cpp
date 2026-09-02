@@ -6,7 +6,7 @@
 
 ScreenGrabber::ScreenGrabber(QObject* parent) : QObject(parent) {}
 
-QScreen* ScreenGrabber::GetScreen() const
+QScreen* ScreenGrabber::GetScreen()
 {
 	QPoint cursor_pos = QCursor::pos();
 

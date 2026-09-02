@@ -11,5 +11,5 @@ class ScreenGrabber : public QObject
 public:
 	explicit ScreenGrabber(QObject* parent = nullptr);
 
-	QScreen* GetScreen() const;
+	static QScreen* GetScreen();
 };
