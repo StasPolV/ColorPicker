@@ -13,5 +13,6 @@ qt_standard_project_setup()
 qt_add_executable(ColorPicker src/main.cpp)
 
 add_subdirectory(src/core)
+add_subdirectory(src/gui)
 
-target_link_libraries(ColorPicker PUBLIC Qt6::Core Qt6::Widgets)
+target_link_libraries(ColorPicker PUBLIC core gui Qt6::Core Qt6::Widgets)
