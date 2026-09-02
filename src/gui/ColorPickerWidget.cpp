@@ -1,27 +1,25 @@
 #include "ColorPickerWidget.h"
 
-#include <QHBoxLayout>
+#include <QColorDialog>
 #include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
+#include <QVBoxLayout>
 
 ColorPickerWidget::ColorPickerWidget(QWidget* parent) : QWidget(parent)
 {
 	setWindowTitle("ColorPicker");
 	setWindowFlag(Qt::WindowStaysOnTopHint);
 
-	QLabel* color_label = new QLabel("Hex: ");
-
-	m_color_line_edit = new QLineEdit;
-	m_color_line_edit->setModified(false);
-
 	QPushButton* start_grabbing = new QPushButton("Start Grabbing");
+	start_grabbing->setMinimumHeight(30);
 
-	QHBoxLayout* h_layout = new QHBoxLayout(this);
+	m_color_dialog = new QColorDialog;
+	m_color_dialog->setOption(QColorDialog::NoButtons, true);
 
-	h_layout->addWidget(color_label);
-	h_layout->addWidget(m_color_line_edit);
-	h_layout->addWidget(start_grabbing);
+	QVBoxLayout* v_layout = new QVBoxLayout(this);
+	v_layout->addWidget(m_color_dialog);
+	v_layout->addWidget(start_grabbing);
 
 	connect(start_grabbing, &QPushButton::clicked, this,
 	        [this]()
@@ -35,11 +33,13 @@ ColorPickerWidget::ColorPickerWidget(QWidget* parent) : QWidget(parent)
 			        StopGrabbing();
 		        }
 	        });
+
+	setFixedSize(m_color_dialog->size());
 }
 
 void ColorPickerWidget::SetColor(QColor color)
 {
-	m_color_line_edit->setText(color.name());
+	m_color_dialog->setCurrentColor(color);
 }
 
 void ColorPickerWidget::mouseMoveEvent(QMouseEvent* event)

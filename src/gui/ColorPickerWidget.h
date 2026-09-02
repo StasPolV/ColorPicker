@@ -5,7 +5,7 @@
 #include <QPoint>
 #include <QWidget>
 
-class QLineEdit;
+class QColorDialog;
 
 class ColorPickerWidget : public QWidget
 {
@@ -28,6 +28,6 @@ private:
 	void StartGrabbing();
 	void StopGrabbing();
 
-	QLineEdit* m_color_line_edit;
+	QColorDialog* m_color_dialog;
 	bool m_is_grabbing = false;
 };
