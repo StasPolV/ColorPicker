@@ -1,6 +1,7 @@
 #include "ScreenGrabber.h"
 
 #include <QCursor>
+#include <QGuiApplication>
 #include <QPoint>
 #include <QScreen>
 
